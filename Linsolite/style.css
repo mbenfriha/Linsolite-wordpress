@@ -1,0 +1,342 @@
+/*
+Theme Name: Linsolite by Benfriha Mohamed
+Theme URI: https://linsolite.tv
+Author: Benfriha Mohamed
+Author URI: https://linsolite.tv
+Description: Theme for Linsolite.tv
+Version: 1.0
+
+*/
+
+body {
+    background-color: ghostwhite;
+    margin-top: 7%;
+}
+
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 568px;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    background-size: cover;
+    background-image: url(galaxy.jpg)
+
+}
+
+.header .form img {
+    border-radius: 50%;
+
+}
+
+.header img:hover {
+    cursor: pointer;
+}
+.social {
+    position: absolute;
+    top: 1%;
+    right: 1%
+}
+
+.form img:hover {
+    box-shadow: 2px 2Px 2Px black;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    transition-duration: 0.2s;
+}
+
+.social ul li {
+    display: inline-block;
+}
+.social ul li img:hover
+{
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    transition-duration: 0.2s;
+}
+
+.form {
+    margin: auto;
+    position: absolute;
+    top: 58% !important;
+    bottom: 0!important;
+    right: 0!important;
+    width: 74px!important;
+    background-color: rgba(128, 128, 128, 0.4);
+    padding: 2Px;
+    border-top-left-radius: 50px;
+}
+
+.form ul li{
+    display: inline-block;
+}
+
+.logo-center {
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 42%;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0%;
+    z-index: 2;
+}
+
+.sticky{
+    position: fixed !important;
+    top: 0; left: 0;
+    z-index: 2;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.color-blue {
+    background-color: #4593BC;
+}
+
+.larg {
+    text-align: center;
+    border-left: 1px solid #616161;
+    box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.065), inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
+    width: 11%;
+}
+
+.side-nav a {
+    color: #FFFAFA;
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 15px;
+}
+
+.menu-c a {
+    font-size: 150%;
+
+}
+
+video#bgvid {
+    z-index: -100;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    background: url(http://theme.co/media/x-home-main-header-3-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+.titre {
+    font-weight: 500;
+    font-size: 27px;
+    font-family: impact;
+    color: black;
+    text-align: center;
+}
+
+.date {
+    color: grey;
+    text-align:right;
+    margin-top: -5%;
+    margin-bottom: -2%;
+}
+.resum {
+    font-size: 16px;
+    color: black;
+    text-align: justify;
+}
+
+.body ul li {
+    color: grey;
+}
+
+.picture {
+    padding: 0!important;
+    position: relative;
+    height: 350px;
+}
+
+.picture .thumbnail {
+    box-shadow: 0px 0Px 13Px black;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.2s;
+}
+
+.video {
+    box-shadow: 0px 0Px 13Px black;
+    padding:0 !important;
+
+}
+
+.infos {
+    padding: 1% !important;
+}
+
+.video:hover {
+    cursor: pointer;
+    box-shadow: 0px 0Px 3Px black;
+    transition-duration: 0.3s;
+}
+
+.video:hover .picture .thumbnail{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    transition-duration: 0.3s;
+}
+
+.video:hover .button-play{
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+.button-play {
+    position: absolute;
+    top: 40%;
+    left: 44%;
+    z-index: 9999;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.card {
+    background: #fff;
+    display: block;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+}
+
+.card-1:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.infos .titre h2 {
+
+    font-size: 25px;
+}
+
+.category {
+    width: 100% !important;
+    left: 0 !important;
+    top: 2% !important;
+}
+
+.category .larg {
+    width: 10%;
+    clear: none !important;
+    height: 64px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #4593BC !important;
+}
+
+.input-field input[type=search] ~ .material-icons {
+    color: #4593BC !important;
+}
+
+.input-field input[type=search]:focus {
+    color: #4593BC !important;
+}
+
+.kon {
+    transform: scaleX(-1) rotate(5deg);
+    transition-duration: 0.1s;
+}
+
+.picture .thumbnail img {
+    height: 100%;
+    width: 100%;
+}
+
+.pagination {
+    clear:both;
+    position:relative;
+    padding:15px 10px;
+    font-size:12px;
+    line-height:13px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.pagination span, .pagination a {
+    width:auto;
+    display:block;
+    float:left;
+    margin: 2px 2px 2px 0;
+    padding:6px 9px 5px 9px;
+    text-decoration:none;
+    color:#fff;
+    background: #555;
+}
+
+.pagination .current{
+    padding:6px 9px 5px 9px;
+    background: #3279BB;
+    color:#fff;
+}
+
+.pagination a:hover{
+    color:#fff;
+    background: #3279BB;
+}
+
+@media only screen and (max-width: 992px) {
+
+
+    .mobile {font-size: 100px;
+    }
+
+    .infos {
+        clear: both !important;
+        width: 100% !important;
+    }
+
+    .picture .thumbnail {
+        width: 150% !important;
+    }
+
+    .button-play {
+        left: 65% !important;
+
+    }
+
+    .social {
+        margin: auto;
+        position: absolute;
+        top: 1px !important;
+        left: 0!important;
+        bottom: 0!important;
+        right: 0!important;
+        width: 270px!important;
+    }
+
+}
+
+
+
+
+.main-nav-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
