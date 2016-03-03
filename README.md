@@ -16,3 +16,9 @@ Just add all files in wp-content/themes/linsolite
 
 -template page
 
+-responsive mobile
+
+-easter eggs in logo
+
+-social button in header
+
