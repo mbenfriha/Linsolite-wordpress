@@ -1,44 +1,48 @@
 <?php get_header(); ?>
 
-    <div class="row body">
-        <div class="single col s6 offset-s2 ">
-            <div class="card card-1">
-                <div class="title-single">
-                    <div class="nav-single">
-                        <div class="next next-single"> <?php next_post_link('%link', 'Vidéo suivante    '); ?>  </div>
-                        <div class="prev previous-single"> <?php previous_post_link('%link', '      Vidéo précedente'); ?> </div>
-                    </div>
-                    <h1><?php the_title(); ?></h1>
-                </div>
-
-                <div class="social-share">
-
-                    <a href="http://www.facebook.com/share.php?u=<?php echo urlencode(get_the_permalink()); ?>&title=<?php echo urlencode(get_the_title()); ?>" target="_blank" class="facebook">Partager sur Facebook</a>
-                    <a href="//twitter.com/share?url=<?php echo urlencode(get_the_permalink()); ?>" target="_blank" class="twitter">Twitter la vidéo</a>
-                </div>
-                    <div class="video-single">
-                        <?php echo get_post_meta(get_the_ID(), 'jtheme_video_code')[0] ?>
-                    </div>
 
 
-                <div class="resum-single">
-                    <?php the_content() ?>
-                    <div class="social-share">
+<div class="single col s12">
+    <div class="single-video">
+        <div class="post-video">
+            <div class="prev-next">
 
-                        <a href="http://www.facebook.com/share.php?u=<?php echo urlencode(get_the_permalink()); ?>&title=<?php echo urlencode(get_the_title()); ?>" class="facebook">Partager sur Facebook</a>
-                        <a href="//twitter.com/share?url={URL}" class="twitter">Twitter la vidéo</a>
-                    </div>
-                    <div class="date-cat">le <?php the_time('j F Y') ?> dans <?php echo the_category(', ')?></div>
-                </div>
+                <div id="prev">  <?php previous_post_link('%link', '<i class="fa fa-caret-left" aria-hidden="true"></i> Vidéo précedente'); ?></div>
 
+                <div id="next"><?php next_post_link('%link', 'Vidéo suivante <i class="fa fa-caret-right" aria-hidden="true"></i>'); ?> </div>
 
+            </div>
+            <?php echo get_post_meta(get_the_ID(), 'jtheme_video_code')[0] ?>
 
-                <div class="comments-single"> <?php comments_template(); ?> </div>
+            <div class="info-video"> le <?php the_time('j F Y') ?> dans <?php echo the_category(', ')?> </div>
+        </div>
+    </div>
+
+    <div class="sub-video">
+        <div class="first-sub-video">
+            <div class="content">
+                <h1><?php the_title(); ?></h1>
+                <?php the_content() ?>
+            </div>
+            <div class="share">
+                <ul>
+                    <li> <a href="http://www.facebook.com/share.php?u=<?php echo urlencode(get_the_permalink()); ?>&title=<?php echo urlencode(get_the_title()); ?>" target="_blank"><div class="facebook-share">PARTAGER <i class="fa fa-facebook" aria-hidden="true"></i> </div> <a/> </li>
+                    <li> <a href="//twitter.com/share?url=<?php echo urlencode(get_the_permalink()); ?>" target="_blank"><div class="tweeter-share">TWEETER <i class="fa fa-twitter" aria-hidden="true"></i> </div> </a> </li>
+                    <li> <a href="#comment"><div class="comment">COMMENTER <i class="fa fa-commenting-o" aria-hidden="true"></i> </div> </a> </li>
+                </ul>
             </div>
         </div>
+        <div class="seconde-sub-video">
+            <div class="more-video"><h2>le<span>s autr</span>es</h2></div>
+        </div>
 
-        <?php get_sidebar(); ?>
+        <div id="comment" class="third-sub-video">
+             <?php comments_template(); ?>
+        </div>
     </div>
+</div>
+
+
 
 
 <?php get_footer(); ?>

@@ -8,18 +8,15 @@ Template Name: pagebase
 ?>
 
 
+<div class="allVideo">
 
-<div class="row body">
-    <div class="single col s6 offset-s2 ">
-        <div class="card card-1">
+    <div id="content" class="videos">
             <h3><?php the_title(); ?></h3>
 
             <?php the_content(); ?>
-
-</div>
-</div>
 </div>
 
+</div>
 
 <?php get_footer(); ?>
 

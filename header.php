@@ -4,8 +4,15 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <script src="https://use.fontawesome.com/250b302b5a.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+
+
+<?php wp_head( ) ?>
     <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
     <!-- the default values -->
     <meta property="fb:app_id" content="683931481746708" />
@@ -25,6 +32,17 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://linsolite.tv/wp-content/uploads/2015/01/trans.png" /> <?php } ?>
 
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-51466246-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -52,77 +70,55 @@
 </script>
 <div class="header-top">
 
-    <nav class="nav color-blue">
-        <div class="nav-wrapper mobile">
+    <div class="col s12 head-blue"></div>
+    <div class="col s12 nav">
+        <ul class="left">
+            <li id="active-menu"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
+            <li id="contact"> <i class="fa fa-envelope-o" aria-hidden="true"></i> </li>
+        </ul>
 
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="hide-on-med-and-down menu-c">
-                <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>"><i class="material-icons">home</i></a></li>
-                <li class="larg"><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">view_list</i></a></li>
-                <li class="logo-nav"><img src="http://linsolite.tv/wp-content/uploads/2015/02/logo-facebook-trans1.png" alt="center linsolite"></li>
+        <ul class="right sociaux-nav">
+            <?php
 
-                <li class="right blue-search">
-                    <form method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
-                    <div class="input-field">
-                            <input id="search" name="s" type="search" required>
-                            <label for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
+             if (get_option( 'dailymotion_menu', ''))
+            echo '<li><a href="'. get_option( 'dailymotion_menu', '').'"> <i class="fa fa-youtube" aria-hidden="true"></i>  </a></li>';
 
-                <ul id="dropdown1" class="dropdown-content category">
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>">Accueil</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/actualite">Actualité</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/animaux">Animaux</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/bagarre">Bagarre</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/choc">Choc</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/fail">Fail</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/humour">Humour</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/insolite">Insolite</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/inclassable">Inclassable</a></li>
-                    <li class="larg"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/technologie">Technologie</a></li>
-                </ul>
-            </ul>
+             if (get_option( 'snapchat_menu', ''))
+            echo '<li><a href="'. get_option( 'snapchat_menu', '').'"> <i class="fa fa-snapchat-ghost" aria-hidden="true"></i> </a></li>';
 
+            if (get_option( 'facebook_menu', ''))
+            echo '<li><a href="'. get_option( 'facebook_menu', '').'"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>';
 
-            <ul class="side-nav color-blue" id="mobile-demo">
-                <li class="blue-search">
-                    <form method="get" action="<?php echo esc_url( home_url( '/' )); ?>">
-                            <input id="search" name="s" type="search" required>
-                            <label for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                    </form>
-                </li>
-                <li><a class="text-white" href="<?php echo esc_url( home_url( '/' )); ?>">Accueil</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/actualite">Actualité</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/animaux">Animaux</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/bagarre">Bagarre</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/choc">Choc</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/fail">Fail</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/humour">Humour</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/insolite">Insolite</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/inclassable">Inclassable</a></li>
-                <li class="text-white"><a href="<?php echo esc_url( home_url( '/' )); ?>category/categorie/technologie">Technologie</a></li>
-                <li class="text-white"><a href="mobile.html">Nous-contacter</a></li>
-            </ul>
+             if (get_option( 'twitter_menu', ''))
+            echo '<li><a href="'. get_option( 'twitter_menu', '').'"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>';
+
+            if (get_option( 'instagram_menu', ''))
+            echo '<li><a href="'. get_option( 'instagram_menu', '').'"> <i class="fa fa-instagram" aria-hidden="true"></i> </a></li>'
+
+            ?>
+        </ul>
+
+        <div class="right search">
+
+            <form class="searchbox-container">
+                <input type="search" class="searchbox" name="s" autocomplete="off" placeholder="Rechercher" />
+                <button type="submit" class="searchbutton fa fa-search"></button>
+            </form>
+
         </div>
-    </nav>
-    <div class="col s4 social">
-        <ul>
-            <a href="http://www.dailymotion.com/Linsolitetv"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/dailymotion-logo.png" alt="dailymotion"></li></a>
-            <a href="https://www.facebook.com/linsolitetv"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/facebook-logo.png" alt="facebook"></li></a>
-            <a href="https://twitter.com/linsolitetv"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/twitter-social-logotype.png" alt="twitter"></li></a>
-            <a href="https://instagram.com/linsolite.tv/"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/instagram-social-network-logo-of-photo-camera.png" alt="instagram"></li></a>
-        </ul>
+
+
+        <div class="logo"><a href="<?php echo esc_url( home_url( '/' )); ?>"><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite V2/inc/img/logo.png" alt="logo linsolite.Tv linsolite tv"></a></div>
+
+
     </div>
 
-    <div class="col s4 form">
-        <ul>
-            <a href="<?php echo esc_url( home_url( '/' )); ?>nous-contacter/"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/new-email-envelope-back-symbol-in-circular-outlined-button.png" title="nous contacter" alt="contact"></li></a>
-            <a href="<?php echo esc_url( home_url( '/' )); ?>envoyez-vos-videos/"><li><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite/icon/upload-circular-button-variant.png" title="Envoyer une vidéo" alt="upload"></li></a>
-        </ul>
-    </div>
 
-    <img class="logo-center" src="http://linsolite.tv/wp-content/uploads/2015/01/trans.png" alt="linsolite">
+    <?php wp_nav_menu( array( 'theme_location' => 'Top', 'container_class' => 'menu', 'container_id' => 'menu', 'menu_class' => '' ) ); ?>
+
+
+    <img class="img-upload" src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite V2/inc/img/envoyer_video.png" alt=""> </li>
+
+    <div class="col s12 sub-nav"></div>
 </div>
+
