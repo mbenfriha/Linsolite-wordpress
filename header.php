@@ -74,7 +74,12 @@
     <div class="col s12 nav">
         <ul class="left">
             <li id="active-menu"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
-            <li id="contact"> <i class="fa fa-envelope-o" aria-hidden="true"></i> </li>
+            <?php
+
+            if (get_option( 'contact_button', '')) {
+                echo'<a href="'. get_option( 'contact_button', '') .'"><li id = "contact" > <i class="fa fa-envelope-o" aria - hidden = "true" ></i > </li></a>';
+            }
+            ?>
         </ul>
 
         <ul class="right sociaux-nav">
@@ -116,9 +121,15 @@
 
     <?php wp_nav_menu( array( 'theme_location' => 'Top', 'container_class' => 'menu', 'container_id' => 'menu', 'menu_class' => '' ) ); ?>
 
+<?php
 
-    <img class="img-upload" src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite V2/inc/img/envoyer_video.png" alt=""> </li>
+if (get_option( 'send_button', '')) {
+    echo '<a href="'. get_option( 'send_button', '') .'"><img class="img-upload" src="' . esc_url(home_url('/')) . 'wp-content/themes/Linsolite V2/inc/img/envoyer_video.png" alt=""> </li></a>';
+}
 
-    <div class="col s12 sub-nav"></div>
+?>
+
+
+
 </div>
 

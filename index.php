@@ -22,9 +22,9 @@
                     ' </div></a>
 
                 <div class="caption left-align">
-                    <a href=\"'.get_permalink($recent["ID"]).'\"><h3>'. $recent["post_title"] .'</h3></a>
+                    <a href='.get_permalink($recent["ID"]).'><h3>'. $recent["post_title"] .'</h3></a>
                     <div class="border-slider-title"></div>
-                    <h4 class="light grey-text text-lighten-3">'. wp_trim_words(  $recent['post_content'], 20, ' … <a class="more" href=\"'.get_permalink($recent["ID"]).'\">LIRE PLUS</a>' ) . '</h4>
+                    <h4 class="light grey-text text-lighten-3">'. wp_trim_words(  $recent['post_content'], 20, ' … <a class="more" href='.get_permalink($recent["ID"]).'>LIRE PLUS</a>' ) . '</h4>
                 </div>
 
 

@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="copyright">2016 - LINSOLITE.TV TOUT DROIT RÉSERVÉ - DESIGN BY JULIEN COTTAZ </div>
+    <div class="copyright">2016 © LINSOLITE.TV V2.2.1 Tous droits réservés - DESIGN BY <a href="http://www.juliencottaz-design.com">JULIEN COTTAZ </a></div>
 </div>
 
 

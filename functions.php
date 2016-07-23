@@ -14,11 +14,13 @@ function myThemeRegisterSettings( )
 {
     register_setting( 'my_theme', 'slider_number' ); // nombre de slide
     register_setting( 'my_theme', 'slider_active' ); // activer slider
-    register_setting( 'my_theme', 'facebook_menu' ); // activer slider
-    register_setting( 'my_theme', 'twitter_menu' ); // activer slider
-    register_setting( 'my_theme', 'instagram_menu' ); // activer slider
-    register_setting( 'my_theme', 'snapchat_menu' ); // activer slider
-    register_setting( 'my_theme', 'dailymotion_menu' ); // activer slider
+    register_setting( 'my_theme', 'facebook_menu' ); // facebook
+    register_setting( 'my_theme', 'twitter_menu' ); // twitter
+    register_setting( 'my_theme', 'instagram_menu' ); // instagram
+    register_setting( 'my_theme', 'snapchat_menu' ); // snapchat
+    register_setting( 'my_theme', 'dailymotion_menu' ); // dailymotion
+    register_setting( 'my_theme', 'send_button' ); // send button
+    register_setting( 'my_theme', 'contact_button' ); // contact button
 }
 
 
@@ -85,6 +87,20 @@ function myThemeSettingsPage( )
                 <th scope="row"><label for="dailymotion_menu">Dailymotion</label></th>
                 <td><input type="text" id="dailymotion_menu" name="dailymotion_menu" class="text" value="<?php echo get_option( 'dailymotion_menu', '' ); ?>" /></td>
             </tr>
+            </table>
+
+            <h1>Custom button</h1>
+
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="send_button">Envoyer une vidéo</label></th>
+                    <td><input type="text" id="send_button" name="send_button" class="text" value="<?php echo get_option( 'send_button', '' ); ?>" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="contact_button">Bouton contacter</label></th>
+                    <td><input type="text" id="contact_button" name="contact_button" class="text" value="<?php echo get_option( 'contact_button', '' ); ?>" /></td>
+                </tr>
+
             </table>
 
             <p class="submit">

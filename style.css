@@ -4,7 +4,7 @@ Theme URI: https://linsolite.tv
 Author: Benfriha Mohamed
 Author URI: https://linsolite.tv
 Description: Theme for Linsolite.tv
-Version: 2.001
+Version: 2.2.1
 
 */
 
@@ -105,7 +105,6 @@ body {
 }
 
 .menu {
-    height: 80px;
     background-color: #468FBE;
     display: none;
 }
@@ -124,20 +123,21 @@ body {
 .menu ul li {
     float: left;
     text-align: center;
-    width: 12%;
-    padding: 2.4em 0;
 }
 
 .menu ul a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 13px;
+    display: block;
+    padding: 2em 2.2em;
 }
 .menu ul a:hover {
 
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
+    background-color: #7eabc7;
 }
 
 input[type="search"] {
@@ -255,6 +255,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     background-repeat: no-repeat;
     background-size: 100% 400px;
     position: relative;
+    margin-top: 7%;
 }
 
 .newVideo h1 {
@@ -393,14 +394,25 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     width: 96%;
     height: 100%;
     border: #2E6C82 6px solid;
+    cursor: pointer;
 }
 
 .allvideo article:hover img {
 
 }
+.allvideo article:hover .infos {
+    color: white;
+    transition-duration: 0.8s;
+
+}
+.allvideo article:hover .thumb {
+    cursor: pointer;
+
+}
+
 .allvideo article:hover {
-    background-color: #358ca3;
-    transition-duration: 1s;
+    background-color: #9fc1ca;
+    transition-duration: 0.8s;
 }
 
 
@@ -557,6 +569,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 .single-video {
     background-color: #142a32;
     height: 550px;
+    margin-top: 4%;
 }
 
 
@@ -619,8 +632,37 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 }
 
 .more-video {
-    height: 200px;
+    height: 210px;
     background-color: #e1e1e1;
+}
+
+.more-video li {
+    display: inline-block;
+    margin: 2em 1em;
+    width: 16%;
+    height: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.more-video img {
+    width: 160px;
+    height: 120px;
+}
+
+.more-video .title-more {
+    font-weight: 700;
+    color: #2f393b;
+    font-family: 'Raleway', sans-serif;
+}
+.more-video .title-more a {
+    font-weight: 700;
+    color: #2f393b;
+    font-family: 'Raleway', sans-serif;
+}
+
+.more-video ul {
+    padding-left: 3em;
 }
 
 .sub-video .content {
@@ -641,6 +683,29 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     margin: 0;
 }
 
+.facebook-share:hover {
+    transform: scale(1.25);
+    transition-duration: 0.3s;
+    box-shadow: 1px 1px 1px black;
+
+}
+.tweeter-share:hover {
+    transform: scale(1.25);
+    transition-duration: 0.3s;
+    box-shadow: 1px 1px 1px black;
+
+
+
+}
+.comment:hover {
+    transform: scale(1.25);
+    transition-duration: 0.3s;
+    box-shadow: 1px 1px 1px black;
+
+
+
+}
+
 .share .facebook-share {
     background-color: #506da2;
     padding: 7px;
@@ -649,6 +714,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     color: white;
     font-size: 17px;
     margin-bottom: 4%;
+    transition-duration: 0.3s;
+
 }
 
 .share .tweeter-share {
@@ -659,6 +726,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     color: white;
     font-size: 17px;
     margin-bottom: 4%;
+    transition-duration: 0.3s;
+
 }
 
 .share .comment {
@@ -668,6 +737,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     font-weight: 600;
     color: white;
     font-size: 17px;
+    transition-duration: 0.3s;
+
 }
 
 .share i {
@@ -767,6 +838,10 @@ a:hover span, a:focus span{
         padding: 3% 5%;
     }
 
+    .nav .right {
+        width: 24%;
+    }
+
     .logo {
         margin-top: -10.7%;
     }
@@ -776,7 +851,7 @@ a:hover span, a:focus span{
     }
 
     .search {
-        width: 24% !important;
+        width: 24%;
     }
 
     .menu ul {
@@ -865,6 +940,18 @@ a:hover span, a:focus span{
         font-size: 2vw;
     }
 
+    .menu ul li {
+        text-align: center;
+        width: 100%;
+        padding: 1.1em 0;
+        border-bottom: 1px white solid;
+    }
+
+    .menu ul a {
+        font-size: 9px;
+        padding: 0.8em 2.2em;
+    }
+
 
 
     .newVideo h1 {
@@ -925,7 +1012,11 @@ a:hover span, a:focus span{
     }
 
     .nav .right {
-        display: none;
+    }
+
+    .menu ul a {
+        font-size: 9px;
+        padding: 0.8em 2.2em;
     }
 
     .logo img {
@@ -935,6 +1026,12 @@ a:hover span, a:focus span{
     .logo {
         width: 200px;
         margin-top: -12.7%;
+    }
+
+    .search {
+        width: 61%;
+        margin: 0 auto;
+        margin-top: 5%;
     }
 
     .caption h4 {
@@ -950,6 +1047,9 @@ a:hover span, a:focus span{
 
     .allVideo {
         margin-bottom: 30%;
+    }
+    .allVideo .videos {
+        width: 85%;
     }
 
     .allVideo h1 {
@@ -971,7 +1071,8 @@ a:hover span, a:focus span{
     }
 
     .allVideo .videos .video {
-        height: 300px;
+        height: auto;
+        margin-top: 6%;
     }
 
     .excerpt p {

@@ -33,11 +33,40 @@
             </div>
         </div>
         <div class="seconde-sub-video">
-            <div class="more-video"><h2>le<span>s autr</span>es</h2></div>
+            <div class="more-video"><h2>le<span>s autr</span>es</h2>
+                <ul>
+                    <?php
+
+                    // The Query
+                    query_posts('orderby=rand&posts_per_page=5&cat='. get_the_category(get_the_ID())[0]->term_id);
+
+                    // The Loop
+                    while ( have_posts() ) : the_post();
+                        echo
+                               '<li>
+
+                               <a href="'. get_permalink(get_the_ID()) .'">' . get_the_post_thumbnail(get_the_ID(), 'small') . '</a>
+
+                                <span class="title-more"> <a href="'. get_permalink(get_the_ID()) .'">' . get_the_title(get_the_ID()). ' </a></span>
+
+                               </li>';
+
+
+                    endwhile;
+
+                    // Reset Query
+                    wp_reset_query();
+                    ?>
+
+                </ul>
+
+            </div>
+
+
         </div>
 
         <div id="comment" class="third-sub-video">
-             <?php comments_template(); ?>
+            <?php comments_template(); ?>
         </div>
     </div>
 </div>
