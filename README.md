@@ -32,14 +32,25 @@ Just add all files in wp-content/themes/linsolite
 V2.2.1 - 23 July 2016
 
 ADDED : Slider mobile
+
 ADDED : Click post on slider
+
 ADDED : Nav fixed
+
 ADDED : Search mobile
+
 ADDED : Button contact & send
+
 IMPROVED : nav button
+
 DELETE : title/link after video
+
 IMPROVED : Social share
+
 ADDED : Other video
+
 BUG FIXED : Space index posts on mobile
+
 IMPROVED : Hover post index
+
 IMPROVED : Link copyright footer
