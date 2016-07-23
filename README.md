@@ -1,5 +1,5 @@
 # Linsolite-wordpress
-Theme wordpress made for Linsolite.tv V0.1
+Theme wordpress made for Linsolite.tv V2.2.0
 
 Just add all files in wp-content/themes/linsolite
 
@@ -11,19 +11,17 @@ Just add all files in wp-content/themes/linsolite
 
 # Features 
 
--Widget facebook like box (just add your facebook link)
+-Custom menu head
 
--Widget last post (choice title and number of post)
+-Custom menu socials
 
 -Open graph for facebook share
 
 -add disqus comment in single.php
 
--template page
+-Slider on/off
 
 -responsive mobile
 
--easter eggs in logo
-
--social button in header
+-custom 3 widget footer
 
