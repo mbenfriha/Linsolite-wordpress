@@ -238,6 +238,18 @@ function wpc_champs_personnalises_defaut($post_id)
 }
 
 
+/*
+ *
+ * widget
+ *
+ */
+
+require_once( get_template_directory() . '/widget/widget_social_footer.php' );
+
+if ( function_exists('register_sidebar') ) register_sidebar();
+
+
+
 
 
 

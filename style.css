@@ -53,7 +53,7 @@ body {
     display: inline;
     font-size: 27px;
     color: #0B262B;
-    margin-right: 25%;
+    margin-right: 21%;
     cursor: pointer;
 }
 
@@ -113,7 +113,7 @@ body {
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
-    width: 60%;
+    width: 64%;
     z-index: 3;
     position: relative;
     overflow: hidden;
@@ -531,6 +531,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     float: left;
     width: 32%;
     text-align: center;
+}
+
+#footer-sidebar3 a{
+    font-size: 2vw;
+    margin: 0 3%;
+}
+#footer-sidebar3 a:hover{
+    color: #d8d8d8;
 }
 
 .widget-title {
@@ -1176,6 +1184,11 @@ a:hover span, a:focus span{
 
     .third-sub-video {
         margin-bottom: 31px;
+    }
+
+    #footer-sidebar3 a {
+        font-size: 6.4vw;
+        margin: 0 3%;
     }
 }
 

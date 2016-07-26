@@ -6,6 +6,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="inc/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="inc/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="inc/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="inc/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="inc/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="inc/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="inc/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="inc/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="inc/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="inc/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="inc/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="inc/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="inc/img/favicon-16x16.png">
+    <link rel="manifest" href="inc/img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="inc/img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 
     <script src="https://use.fontawesome.com/250b302b5a.js"></script>
 
@@ -86,19 +104,19 @@
             <?php
 
              if (get_option( 'dailymotion_menu', ''))
-            echo '<li><a href="'. get_option( 'dailymotion_menu', '').'"> <i class="fa fa-youtube" aria-hidden="true"></i>  </a></li>';
+            echo '<li><a target="_blank" href="'. get_option( 'dailymotion_menu', '').'"> <i class="fa fa-youtube" aria-hidden="true"></i>  </a></li>';
 
              if (get_option( 'snapchat_menu', ''))
-            echo '<li><a href="'. get_option( 'snapchat_menu', '').'"> <i class="fa fa-snapchat-ghost" aria-hidden="true"></i> </a></li>';
+            echo '<li><a target="_blank" href="'. get_option( 'snapchat_menu', '').'"> <i class="fa fa-snapchat-ghost" aria-hidden="true"></i> </a></li>';
 
             if (get_option( 'facebook_menu', ''))
-            echo '<li><a href="'. get_option( 'facebook_menu', '').'"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>';
+            echo '<li><a target="_blank" href="'. get_option( 'facebook_menu', '').'"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>';
 
              if (get_option( 'twitter_menu', ''))
-            echo '<li><a href="'. get_option( 'twitter_menu', '').'"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>';
+            echo '<li><a target="_blank" href="'. get_option( 'twitter_menu', '').'"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>';
 
             if (get_option( 'instagram_menu', ''))
-            echo '<li><a href="'. get_option( 'instagram_menu', '').'"> <i class="fa fa-instagram" aria-hidden="true"></i> </a></li>'
+            echo '<li><a target="_blank" href="'. get_option( 'instagram_menu', '').'"> <i class="fa fa-instagram" aria-hidden="true"></i> </a></li>'
 
             ?>
         </ul>
