@@ -25,6 +25,8 @@ Just add all files in wp-content/themes/linsolite
 
 -custom 3 widget footer
 
+-Widget Linsolite socials footer
+
 
 # Features 
 
@@ -33,6 +35,8 @@ V2.2.1 - 23 July 2016
 ADDED : link socials on footer
 
 ADDED : favicon
+
+ADDED : Widget socials footer
 
 BUG FIXED : click new tabs
 
