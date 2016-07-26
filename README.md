@@ -1,5 +1,5 @@
 # Linsolite-wordpress
-Theme wordpress made for Linsolite.tv V2.2.0
+Theme wordpress made for Linsolite.tv V2.2.2
 
 Just add all files in wp-content/themes/linsolite
 
