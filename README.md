@@ -28,6 +28,21 @@ Just add all files in wp-content/themes/linsolite
 
 # Features 
 
+V2.2.1 - 23 July 2016
+
+ADDED : link socials on footer
+
+ADDED : favicon
+
+BUG FIXED : click new tabs
+
+BUG FIXED : size nav
+
+BUG FIXED : Search button
+
+BUG FIXED : button
+
+----------------------------
 
 V2.2.1 - 23 July 2016
 
