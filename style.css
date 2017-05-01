@@ -1,10 +1,10 @@
 /*
-Theme Name: Linsolite by Benfriha Mohamed
+Theme Name: Linsolite by Benfriha Mohamed v2.2.3
 Theme URI: https://linsolite.tv
 Author: Benfriha Mohamed
 Author URI: https://linsolite.tv
 Description: Theme for Linsolite.tv
-Version: 2.2.1
+Version: 2.2.3
 
 */
 
@@ -150,92 +150,89 @@ input[type="search"] {
     display: inline-block;
 }
 
-.searchbutton, .searchbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    -webkit-transition: background-color, 0.3s;
-    transition: background-color, 0.3s;
-    font-size: 20px;
-    line-height: 1;
-    color: #979797;
-    border-radius: 0;
-    float: left;
-    border: none;
-    height: 50px;
+
+
+input {
     outline: none;
-    background: #76c4ff;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none;
 }
 
-input[type="search"] {
-    border-radius: 0;
-    -webkit-appearance: none;
+input[type=search]:hover {
+    background: #ededed url(inc/icon/icon_search_survol.png) no-repeat 9px center;
 }
 
-.searchbox {
-    padding: 0px 20px !important;
-}
-.searchbox:focus, .searchbox:hover {
-    background-color: white !important;
-}
-.searchbox:focus + .searchbutton, .searchbox:hover + .searchbutton {
-    background-color: white !important;
-}
-.searchbox.placeholder {
-    color: #979797  !important;
-    font-style: italic !important;
-}
-.searchbox:-moz-placeholder {
-    color: #979797  !important;
-    font-style: italic  !important;
-}
-.searchbox::-moz-placeholder {
-    color: #979797 !important;
-    font-style: italic !important;
-}
-.searchbox:-ms-input-placeholder {
-    color: #979797 !important;
-    font-style: italic !important;
-}
-.searchbox::-webkit-input-placeholder {
-    color: #979797 !important;
-    font-style: italic !important;
-}
-
-.searchbutton {
-    width: 50px !important;
-    padding: 0 !important;
-    text-align: center !important;
-    background-color: white;
-    color: #979797;
-    border-left: 1px solid #979797;
-    height: 100% !important;
-}
-
-
-.searchbutton:hover, .searchbutton:focus {
-    color: #006fc2 !important;
-}
-.searchbutton:active {
-    color: #00355c !important;
-}
 
 input[type=search] {
-    width: 43% !important;
-    border: none !important;
-    height: 3.33rem !important;
-    background-color: white !important;
-    height: 100% !important;
+    background: #ededed url(inc/icon/icon_search.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    height:2rem !important;
+
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+input[type=search]:focus {
+    width: 100px;
+    background-color: #fff;
+
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
 
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #979797 !important;
-    box-shadow: 0 1px 0 0 #979797 !important;
+
+input:-moz-placeholder {
+    color: #999;
+}
+input::-webkit-input-placeholder {
+    color: #999;
 }
 
+
+#demo-2 {
+    margin-top: 1%;
+}
+/* Demo 2 */
+#demo-2 input[type=search] {
+    width: 27px;
+    padding-left: 20px;
+    color: transparent;
+    cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+    background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+    width: 100px;
+    padding-left: 44px;
+    color: #000;
+    background-color: #fff;
+    cursor: auto;
+    background: #ededed url(inc/icon/icon_search_survol.png) no-repeat 9px center;
+    border-bottom: 1px solid #4b93c4;
+    box-shadow: 0 1px 0 0 #4b93c4;
+}
+#demo-2 input:-moz-placeholder {
+    color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+    color: transparent;
+}
 
 .sub-nav {
     height: 70px;
@@ -255,7 +252,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     background-repeat: no-repeat;
     background-size: 100% 400px;
     position: relative;
-    margin-top: 7%;
+    margin-top: 14%;
 }
 
 .newVideo h1 {
@@ -345,7 +342,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 
 
 .allVideo {
-    margin-top: 9%;
+    margin-top: 15%;
     width: 100%;
     position: relative;
     margin-bottom: 9%;
@@ -381,7 +378,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     clear: both;
     height: 344px;
     border-top: 2px solid lightgrey;
-    padding: 3.5% 2%;
+    padding: 1.5% 2%;
+    overflow: hidden;
 }
 
 .videos .video:first-child {
@@ -450,7 +448,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 
 .pagination {
     position: relative;
-    width: 10%;
+    max-width: 24%;
     margin: 0 auto;
     bottom: -36px;
 }
@@ -965,7 +963,7 @@ a:hover span, a:focus span{
     .newVideo h1 {
         color: white;
         left: 36%;
-        top: -2%;
+        top: -3%;
         font-size: 4vw;
     }
 
@@ -976,13 +974,14 @@ a:hover span, a:focus span{
 
     .allVideo {
         margin-bottom: 11%;
+        margin-top: 25%;
     }
 
 
     .allVideo h1 {
         color: #0B262B;
         left: 38%;
-        top: -2.8%;
+        top: -4%;
         font-size: 4vw;
     }
 
@@ -1001,7 +1000,7 @@ a:hover span, a:focus span{
 
     .pagination {
         position: relative;
-        width: 18% !important;
+        max-width: 18% !important;
         margin: 0 auto;
         bottom: -8px;
     }
@@ -1029,17 +1028,19 @@ a:hover span, a:focus span{
 
     .logo img {
         width: 200px;
+        margin-top: -21%;
     }
 
     .logo {
         width: 200px;
-        margin-top: -12.7%;
+        margin-top: -0.7%;
     }
 
     .search {
         width: 61%;
         margin: 0 auto;
         margin-top: 5%;
+        display : none;
     }
 
     .caption h4 {
@@ -1061,7 +1062,7 @@ a:hover span, a:focus span{
     }
 
     .allVideo h1 {
-        top: -2.2%;
+        top: -3.2%;
     }
 
     .allVideo .video img {
@@ -1189,6 +1190,28 @@ a:hover span, a:focus span{
     #footer-sidebar3 a {
         font-size: 6.4vw;
         margin: 0 3%;
+    }
+
+    .seconde-sub-video h2 {
+        top: 0%;
+    }
+
+    .more-video {
+        height: auto;
+    }
+
+    .more-video ul {
+        padding: 5em 5em;
+    }
+
+    .more-video ul li {
+        display: inline-block;
+        overflow: initial;
+        width: 100%;
+    }
+
+    .more-video img {
+        width: 100%;
     }
 }
 

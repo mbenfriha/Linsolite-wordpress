@@ -1,7 +1,17 @@
 <div class="footer">
     <div class="logo-footer">
         <div class="img-logo-footer">
-        <img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite V2/inc/img/logo_footer.png"" alt="">
+
+
+            <?php
+            if (get_option( 'top_logo', ''))
+                echo '<img src="'.get_option( 'footer_logo', '').'" alt="">';
+            else
+                echo  '<img src="'.esc_url( home_url( '/' )).'wp-content/themes/Linsolite V2/inc/img/logo_footer.png" alt="">';
+
+            ?>
+
+
         </div>
     </div>
 
@@ -30,7 +40,7 @@
     </div>
 
 
-    <div class="copyright">2016 © LINSOLITE.TV V2.2.2 Tous droits réservés - DESIGN BY <a target="_blank" href="http://www.juliencottaz-design.com">JULIEN COTTAZ </a></div>
+    <div class="copyright">2016 © LINSOLITE.TV V2.2.3 Tous droits réservés - DESIGN BY <a target="_blank" href="http://www.juliencottaz-design.com">JULIEN COTTAZ </a></div>
 </div>
 
 

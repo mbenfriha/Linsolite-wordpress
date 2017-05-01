@@ -12,6 +12,8 @@ add_action( 'admin_init', 'myThemeRegisterSettings' );
 
 function myThemeRegisterSettings( )
 {
+    register_setting( 'my_theme', 'top_logo' ); // logo top nav
+    register_setting( 'my_theme', 'footer_logo' ); // logo footer
     register_setting( 'my_theme', 'slider_number' ); // nombre de slide
     register_setting( 'my_theme', 'slider_active' ); // activer slider
     register_setting( 'my_theme', 'facebook_menu' ); // facebook
@@ -52,6 +54,30 @@ function myThemeSettingsPage( )
 
             settings_fields( 'my_theme' );
             ?>
+
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="top_logo">Logo top</label></th>
+                    <td>
+                        <label for="upload_image">
+                            <input class="upload_image" name="top_logo" type="text" size="36" name="ad_image" value="<?php echo get_option( 'top_logo', '' ); ?>" />
+                            <input class="upload_image_button" name="top_logo" class="button" type="button" value="Upload Image" />
+                            <br />Enter a URL or upload an image (400x200px)
+                        </label>
+                    </td>
+                </tr>
+                <tr valign="footer">
+                    <th scope="row"><label for="footer_logo">Logo footer</label></th>
+                    <td>
+                        <label for="upload_image">
+                            <input class="upload_image" name="footer_logo" type="text" size="36" name="ad_image" value="<?php echo get_option( 'footer_logo', '' ); ?>" />
+                            <input class="upload_image_button" name="footer_logo" class="button" type="button" value="Upload Image" />
+                            <br />Enter a URL or upload an image (150x150px)
+                        </label>
+                    </td>
+                </tr>
+
+            </table>
 
             <table class="form-table">
                 <tr valign="top">
@@ -129,6 +155,16 @@ function myThemeCss( )
     ';
 }
 
+
+add_action('admin_enqueue_scripts', 'my_admin_scripts');
+
+function my_admin_scripts() {
+    if (isset($_GET['page']) && $_GET['page'] == 'linsolite-theme') {
+        wp_enqueue_media();
+        wp_register_script('upload-js', get_template_directory_uri ().'/inc/js/upload.js', array('jquery'));
+        wp_enqueue_script('upload-js');
+    }
+}
 
 /*
  *

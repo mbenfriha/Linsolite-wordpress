@@ -1,5 +1,6 @@
 <html <?php language_attributes(); ?>>
 <head>
+
     <title>Linsolite v1.0</title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,6 +62,8 @@
         ga('send', 'pageview');
 
     </script>
+
+
 </head>
 <body>
 <div id="fb-root"></div>
@@ -123,15 +126,21 @@
 
         <div class="right search">
 
-            <form class="searchbox-container">
-                <input type="search" class="searchbox" name="s" autocomplete="off" placeholder="Rechercher" />
-                <button type="submit" class="searchbutton fa fa-search"></button>
+            <form id="demo-2">
+                <input type="search" name="s" placeholder="Rechercher" />
+
             </form>
 
         </div>
 
+        <?php
+        if (get_option( 'top_logo', ''))
+            echo '<div class="logo"><a href="'. esc_url( home_url( '/' )).'"><img src="'.get_option( 'top_logo', '').'" alt="logo linsolite.Tv linsolite tv"></a></div>';
+        else
+            echo  '<div class="logo"><a href="'. esc_url( home_url( '/' )).'"><img src="'. esc_url( home_url( '/' )). 'wp-content/themes/Linsolite V2/inc/img/logo.png" alt="logo linsolite.Tv linsolite tv"></a></div>';
 
-        <div class="logo"><a href="<?php echo esc_url( home_url( '/' )); ?>"><img src="<?php echo esc_url( home_url( '/' )); ?>wp-content/themes/Linsolite V2/inc/img/logo.png" alt="logo linsolite.Tv linsolite tv"></a></div>
+        ?>
+
 
 
     </div>
