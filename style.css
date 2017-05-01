@@ -594,6 +594,17 @@ input::-webkit-input-placeholder {
 }
 
 
+.ad-single .adv-index {
+    width: 100%;
+    padding: 1.5% 2%;
+}
+
+.ad-single .adv-index .adv {
+    width: 728px;
+    margin: 0 auto;
+}
+
+
 .prev-next {
     clear: both;
     color: white;
@@ -639,6 +650,19 @@ input::-webkit-input-placeholder {
     overflow: hidden;
     margin-bottom: 50px;
 }
+
+
+.allVideo .adv-index {
+    width: 100%;
+    border-top: 2px solid lightgrey;
+    padding: 1.5% 2%;
+}
+
+.allVideo .adv-index .adv {
+    width: 728px;
+    margin: 0 auto;
+}
+
 
 .more-video {
     height: 210px;
@@ -890,6 +914,18 @@ a:hover span, a:focus span{
         margin: 0px 13vw;
         margin-bottom: 1vw;
     }
+
+    .adv-index .adv {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    .adv-index .adv img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
 
     .info-video {
         margin: -16px 15%;

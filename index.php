@@ -47,6 +47,17 @@
 
             get_template_part( 'content', get_post_format() );
 
+            if( $wp_query->current_post % 4 == 3 ) {
+
+                    echo '<div class="adv-index">
+                        <div class="adv">
+                            <a href="https://www.facebook.com/linsolitetv/" target="_blank">
+                                <img src="'.esc_url( home_url( '/' )).'wp-content/themes/Linsolite-wordpress/inc/img/pub_index.png" alt="linsolite facebook">
+                            </a>
+                        </div>
+                      </div>';
+            }
+
      endwhile; else:
      _e('Sorry, no posts matched your criteria.'); ?>
 
@@ -55,8 +66,6 @@
     <?php pressPagination($pages ='', $range = 2); ?>
 
     </div>
-
-
 
 </div>
 
