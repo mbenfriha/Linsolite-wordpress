@@ -11,24 +11,40 @@
 // Previous slide
         $('.slider').slider('prev');
 
-        $(".button-collapse").sideNav();
+        $(".button-collapse").sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: true,
+                draggable: true
+            }
+        ); $(".button-search").sideNav({
+                menuWidth: 300,
+                edge: 'right',
+                closeOnClick: true,
+                draggable: true
+            }
+        );
 
         $( "#active-menu" ).click(function() {
-            $( "#menu" ).slideToggle( "fast", function() {
-                if (window.matchMedia("(max-width: 1024px)").matches) {
-                } else {
-                    if ($('#menu').css('display') == 'block') {
-                        $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
-                        $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
-                        $(".img-upload").css({'top': '-40px'});
+            if (window.matchMedia("(max-width: 1024px)").matches) {
+
+            } else {
+                $( "#menu" ).slideToggle( "fast", function() {
+                    if (window.matchMedia("(max-width: 1024px)").matches) {
+                    } else {
+                        if ($('#menu').css('display') == 'block') {
+                            $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
+                            $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
+                            $(".img-upload").css({'top': '-40px'});
+                        }
+                        else {
+                            $(".logo img").css({'width': '400px'});
+                            $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
+                            $(".img-upload").css({'top': '-22px'});
+                        }
                     }
-                    else {
-                        $(".logo img").css({'width': '400px'});
-                        $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
-                        $(".img-upload").css({'top': '-22px'});
-                    }
-                }
-            });
+                });
+            }
         });
 
         $('iframe').next().next().css('display', 'none');

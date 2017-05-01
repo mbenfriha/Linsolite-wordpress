@@ -94,7 +94,20 @@
     <div class="col s12 head-blue"></div>
     <div class="col s12 nav">
         <ul class="left">
-            <li id="active-menu"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
+            <li id="active-menu" class="hide-on-med-and-down"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
+
+            <li class="hide-on-large-only button-collapse" data-activates="slide-out"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
+            <li class="hide button-search" data-activates="side-search"> <i class="fa fa-search" aria-hidden="true"></i> </li>
+            <ul id="side-search" class="side-nav">
+                <li>
+                    <form id="demo-2">
+                        <input type="search" name="s" placeholder="Rechercher" />
+
+                    </form>
+
+                </li>
+            </ul>
+
             <?php
 
             if (get_option( 'contact_button', '')) {
@@ -124,7 +137,7 @@
             ?>
         </ul>
 
-        <div class="right search">
+        <div class="right search hide-on-med-and-up">
 
             <form id="demo-2">
                 <input type="search" name="s" placeholder="Rechercher" />
@@ -146,7 +159,9 @@
     </div>
 
 
-    <?php wp_nav_menu( array( 'theme_location' => 'Top', 'container_class' => 'menu', 'container_id' => 'menu', 'menu_class' => '' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'Top', 'container_class' => 'menu hide-on-med-and-down', 'container_id' => 'menu', 'menu_class' => '' ) ); ?>
+
+    <?php wp_nav_menu( array( 'theme_location' => 'Top', 'container_class' => 'hide-on-large-only', 'container_id' => 'menu', 'menu_class' => 'menu-mobile side-nav', 'menu_id' => 'slide-out' ) ); ?>
 
 <?php
 

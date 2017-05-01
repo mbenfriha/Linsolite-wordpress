@@ -8,8 +8,6 @@ Version: 2.2.3
 
 */
 
-
-
 /*
         ----------HEADER----------
 */
@@ -79,6 +77,26 @@ body {
 
 .nav ul li a:hover{
     color: #428EC0;
+}
+
+.side-nav {
+    background-color: #468FBE !important;
+    display: block;
+    color: white;
+}
+
+.side-nav a {
+    font-family: 'Raleway', sans-serif;
+    color: white !important;
+    border-bottom: 1px white solid;
+    font-weight: 700;
+}
+
+.button-search {
+    position: absolute;
+    right: 0.6em;
+    bottom: 0.4em;
+    margin-right: 0% !important;
 }
 
 .upload-video {
@@ -246,6 +264,10 @@ input::-webkit-input-placeholder {
 /*
         ----------INDEX----------
 */
+
+.index-page {
+    margin-top: 4em;
+}
 
 
 .newVideo {
@@ -869,6 +891,7 @@ a:hover span, a:focus span{
     .nav {
         box-shadow: none;
         padding: 3% 5%;
+        z-index: 998;
     }
 
     .nav .right {
@@ -885,6 +908,11 @@ a:hover span, a:focus span{
 
     .search {
         width: 24%;
+    }
+
+    .menu {
+        display: block;
+
     }
 
     .menu ul {
@@ -1051,6 +1079,7 @@ a:hover span, a:focus span{
 
     .head-blue {
         height: 30px;
+        display:none;
     }
 
     .nav {
@@ -1066,13 +1095,12 @@ a:hover span, a:focus span{
     }
 
     .logo img {
-        width: 200px;
-        margin-top: -21%;
+        width: 13em;
     }
 
     .logo {
-        width: 200px;
-        margin-top: -0.7%;
+        width: 13em;
+        margin-top: -4%;
     }
 
     .search {
@@ -1253,4 +1281,3 @@ a:hover span, a:focus span{
         width: 100%;
     }
 }
-

@@ -1,25 +1,25 @@
 <?php get_header(); ?>
 
 
+<div class="index-page">
 
 
+    <div class="newVideo">
+        <h1>NO<span>UVEAUT</span>ÉS</h1>
 
-<div class="newVideo">
-    <h1>NO<span>UVEAUT</span>ÉS</h1>
 
+        <div class="slider">
+            <ul class="slides">
 
-    <div class="slider">
-        <ul class="slides">
-
-            <?php
-            $args = array( 'numberposts' => get_option( 'slider_number', '3' ) );
-            $recent_posts = wp_get_recent_posts( $args );
-            foreach( $recent_posts as $recent ){
-                echo '
+                <?php
+                $args = array( 'numberposts' => get_option( 'slider_number', '3' ) );
+                $recent_posts = wp_get_recent_posts( $args );
+                foreach( $recent_posts as $recent ){
+                    echo '
                 <li>
                 <div class="img-slider">
                      <a href='.get_permalink($recent["ID"]).'> <img src=" '. get_the_post_thumbnail( $recent["ID"], 'full' ) .
-                    ' </div></a>
+                        ' </div></a>
 
                 <div class="caption left-align">
                     <a href='.get_permalink($recent["ID"]).'><h3>'. $recent["post_title"] .'</h3></a>
@@ -29,25 +29,25 @@
 
 
                 </li> ';
-            }
-            ?>
-        </ul>
+                }
+                ?>
+            </ul>
+        </div>
+
     </div>
 
-</div>
 
+    <div class="allVideo">
 
-<div class="allVideo">
+        <h1>LE<span>S AUTR</span>ES</h1>
 
-    <h1>LE<span>S AUTR</span>ES</h1>
+        <div id="content" class="videos">
 
-    <div id="content" class="videos">
+            <?php if (have_posts()) : while (have_posts()) : the_post();
 
-        <?php if (have_posts()) : while (have_posts()) : the_post();
+                get_template_part( 'content', get_post_format() );
 
-            get_template_part( 'content', get_post_format() );
-
-            if( $wp_query->current_post % 4 == 3 ) {
+                if( $wp_query->current_post % 4 == 3 ) {
 
                     echo '<div class="adv-index">
                         <div class="adv">
@@ -56,14 +56,16 @@
                             </a>
                         </div>
                       </div>';
-            }
+                }
 
-     endwhile; else:
-     _e('Sorry, no posts matched your criteria.'); ?>
+            endwhile; else:
+                _e('Sorry, no posts matched your criteria.'); ?>
 
-    <?php endif; ?>
+            <?php endif; ?>
 
-    <?php pressPagination($pages ='', $range = 2); ?>
+            <?php pressPagination($pages ='', $range = 2); ?>
+
+        </div>
 
     </div>
 
