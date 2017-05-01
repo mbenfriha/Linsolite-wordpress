@@ -7,7 +7,7 @@
             if (get_option( 'top_logo', ''))
                 echo '<img src="'.get_option( 'footer_logo', '').'" alt="">';
             else
-                echo  '<img src="'.esc_url( home_url( '/' )).'wp-content/themes/Linsolite V2/inc/img/logo_footer.png" alt="">';
+                echo  '<img src="'.esc_url( home_url( '/' )).'wp-content/themes/Linsolite-wordpress/inc/img/logo_footer.png" alt="">';
 
             ?>
 

@@ -137,7 +137,7 @@
         if (get_option( 'top_logo', ''))
             echo '<div class="logo"><a href="'. esc_url( home_url( '/' )).'"><img src="'.get_option( 'top_logo', '').'" alt="logo linsolite.Tv linsolite tv"></a></div>';
         else
-            echo  '<div class="logo"><a href="'. esc_url( home_url( '/' )).'"><img src="'. esc_url( home_url( '/' )). 'wp-content/themes/Linsolite V2/inc/img/logo.png" alt="logo linsolite.Tv linsolite tv"></a></div>';
+            echo  '<div class="logo"><a href="'. esc_url( home_url( '/' )).'"><img src="'. esc_url( home_url( '/' )). 'wp-content/themes/Linsolite-wordpress/inc/img/logo.png" alt="logo linsolite.Tv linsolite tv"></a></div>';
 
         ?>
 
@@ -151,7 +151,7 @@
 <?php
 
 if (get_option( 'send_button', '')) {
-    echo '<a href="'. get_option( 'send_button', '') .'"><img class="img-upload" src="' . esc_url(home_url('/')) . 'wp-content/themes/Linsolite V2/inc/img/envoyer_video.png" alt=""> </li></a>';
+    echo '<a href="'. get_option( 'send_button', '') .'"><img class="img-upload" src="' . esc_url(home_url('/')) . 'wp-content/themes/Linsolite-wordpress/inc/img/envoyer_video.png" alt=""> </li></a>';
 }
 
 ?>
