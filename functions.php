@@ -273,6 +273,28 @@ function wpc_champs_personnalises_defaut($post_id)
     return true;
 }
 
+/*
+ *
+ *  search menu
+ *
+ */
+
+function add_search_box($items, $args) {
+
+    ob_start();
+    get_search_form();
+    $searchform = ob_get_contents();
+    ob_end_clean();
+
+    $items =  '<li class="hide-on-large-only">
+                    <form id="search-nav">
+                        <input type="search" name="s" placeholder="Rechercher" />
+                        <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </li>' . $items;
+    return $items;
+}
+add_filter('wp_nav_menu_items','add_search_box', 10, 2);
 
 /*
  *
@@ -283,9 +305,6 @@ function wpc_champs_personnalises_defaut($post_id)
 require_once( get_template_directory() . '/widget/widget_social_footer.php' );
 
 if ( function_exists('register_sidebar') ) register_sidebar();
-
-
-
 
 
 

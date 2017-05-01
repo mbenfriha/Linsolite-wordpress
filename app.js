@@ -100,11 +100,11 @@
                     $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
                     $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
                     $(".menu").css({'width': '100%', 'position': 'fixed', 'margin-top': '0%', 'top': 'initial'})
-                    $(".newVideo").css({'margin-top': '10.2%'});
+                    $(".newVideo").css({'margin-top': '10.5%'});
                 }
                 else {
                     $(".nav").css({"position": "relative", 'margin-top': '0%', 'z-index': '4'});
-                    $(".menu").css({'width': '100%', 'position': 'relative', 'margin-top': '0%', 'z-index': 3, 'top': '-1em'})
+                    $(".menu").css({'width': '100%', 'position': 'relative', 'margin-top': '0%', 'z-index': 3})
                     $(".newVideo").css({'margin-top': '6%'});
 
                     if ($('#menu').css('display') == 'block') {

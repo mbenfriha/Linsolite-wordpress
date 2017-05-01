@@ -127,7 +127,6 @@ body {
     display: none;
     width: 100%;
     overflow: hidden;
-    top: -1em;
     position: relative;
 }
 
@@ -896,6 +895,22 @@ a:hover span, a:focus span{
 
     .nav .right {
         width: 24%;
+    }
+
+    #search-nav input[type=search] {
+        width: 13em;
+        color: #468fbe;
+        cursor: pointer;
+        background: none;
+    }
+    #search-nav .btn {
+        color: #468fbe;
+        background-color: white;
+    }
+
+    #search-nav input[type=search]:focus:not([readonly]) {
+        border-bottom: 1px solid white;
+        box-shadow: 0 1px 0 0 white;
     }
 
     .logo {
