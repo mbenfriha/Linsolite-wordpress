@@ -909,6 +909,22 @@ a:hover span, a:focus span{
         color: #468fbe;
         cursor: pointer;
         background: none;
+        border-bottom: 1px solid white !important;
+    }
+    *::-webkit-input-placeholder {
+        color: white !important;
+    }
+    *:-moz-placeholder {
+        /* FF 4-18 */
+        color: white !important;
+    }
+    *::-moz-placeholder {
+        /* FF 19+ */
+        color: white !important;
+    }
+    *:-ms-input-placeholder {
+        /* IE 10+ */
+        color: white !important;
     }
     #search-nav .btn {
         color: #468fbe;
