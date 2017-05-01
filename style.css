@@ -90,7 +90,7 @@ body {
     left: 4%;
     top: -22px;
     width: 228px;
-    z-index: 3;
+    z-index: 4;
 }
 
 
@@ -107,6 +107,10 @@ body {
 .menu {
     background-color: #468FBE;
     display: none;
+    width: 100%;
+    overflow: hidden;
+    top: -1em;
+    position: relative;
 }
 
 .menu ul {
@@ -116,13 +120,12 @@ body {
     width: 64%;
     z-index: 3;
     position: relative;
-    overflow: hidden;
-
 }
 
 .menu ul li {
     float: left;
     text-align: center;
+    position:relative;
 }
 
 .menu ul a {
@@ -252,7 +255,7 @@ input::-webkit-input-placeholder {
     background-repeat: no-repeat;
     background-size: 100% 400px;
     position: relative;
-    margin-top: 14%;
+    margin-top: 6%;
 }
 
 .newVideo h1 {

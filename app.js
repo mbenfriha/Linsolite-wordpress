@@ -14,8 +14,17 @@
         $(".button-collapse").sideNav();
 
         $( "#active-menu" ).click(function() {
-            $( "#menu" ).slideToggle( "slow", function() {
-                // Animation complete.
+            $( "#menu" ).slideToggle( "fast", function() {
+                if ($('#menu').css('display') == 'block') {
+                    $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
+                    $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
+                    $(".img-upload").css({'top': '-40px'});
+                }
+                else {
+                    $(".logo img").css({'width': '400px'});
+                    $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
+                    $(".img-upload").css({'top': '-22px'});
+                }
             });
         });
 
@@ -71,13 +80,22 @@
                     });
                     $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
                     $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
-                    $(".menu").css({'width': '100%', 'position': 'fixed', 'margin-top': '0%', 'z-index': 98})
+                    $(".menu").css({'width': '100%', 'position': 'fixed', 'margin-top': '0%', 'top': 'initial'})
+                    $(".newVideo").css({'margin-top': '10.2%'});
                 }
                 else {
-                    $(".nav").css({"position": "relative", 'margin-top': '0%', 'z-index': '2'});
-                    $(".logo img").css({'width': '400px'});
-                    $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
-                    $(".menu").css({'width': '100%', 'position': 'relative', 'margin-top': '0%', 'z-index': 0})
+                    $(".nav").css({"position": "relative", 'margin-top': '0%', 'z-index': '4'});
+                    $(".menu").css({'width': '100%', 'position': 'relative', 'margin-top': '0%', 'z-index': 3, 'top': '-1em'})
+                    $(".newVideo").css({'margin-top': '6%'});
+
+                    if ($('#menu').css('display') == 'block') {
+                        $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
+                        $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
+                    }
+                    else {
+                        $(".logo img").css({'width': '400px'});
+                        $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
+                    }
                 }
             }
         });
