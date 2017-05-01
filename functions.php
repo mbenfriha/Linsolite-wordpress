@@ -292,6 +292,23 @@ function add_search_box($items, $args) {
                         <button class="btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </li>' . $items;
+
+    $items .=
+        '<li class="social-nav-mobile hide-on-large-only">' .
+
+             '<a class="left" target="_blank" href="'. get_option( 'dailymotion_menu', '').'"> <i class="fa fa-youtube" aria-hidden="true"></i>  </a>'.
+
+             '<a class="left" target="_blank" href="'. get_option( 'snapchat_menu', '').'"> <i class="fa fa-snapchat-ghost" aria-hidden="true"></i> </a>'.
+
+             '<a class="left" target="_blank" href="'. get_option( 'facebook_menu', '').'"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>'.
+
+
+            '<a class="left" target="_blank" href="'. get_option( 'twitter_menu', '').'"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>'.
+
+            '<a class="left" target="_blank" href="'. get_option( 'instagram_menu', '').'"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>'
+
+
+       . '</li>';
     return $items;
 }
 add_filter('wp_nav_menu_items','add_search_box', 10, 2);

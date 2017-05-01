@@ -160,6 +160,13 @@ body {
     background-color: #7eabc7;
 }
 
+.social-nav-mobile {
+    margin-top: 2em;
+}
+.social-nav-mobile a {
+    font-size: 2rem !important;
+}
+
 input[type="search"] {
     box-sizing: border-box;
 }
