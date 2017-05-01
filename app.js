@@ -15,15 +15,18 @@
 
         $( "#active-menu" ).click(function() {
             $( "#menu" ).slideToggle( "fast", function() {
-                if ($('#menu').css('display') == 'block') {
-                    $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
-                    $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
-                    $(".img-upload").css({'top': '-40px'});
-                }
-                else {
-                    $(".logo img").css({'width': '400px'});
-                    $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
-                    $(".img-upload").css({'top': '-22px'});
+                if (window.matchMedia("(max-width: 1024px)").matches) {
+                } else {
+                    if ($('#menu').css('display') == 'block') {
+                        $(".logo").css({'width': '180px', 'margin-top': '-0.7%', 'transition-duration': '0.4s'});
+                        $(".logo img").css({'width': '180px', 'transition-duration': '0.4s'});
+                        $(".img-upload").css({'top': '-40px'});
+                    }
+                    else {
+                        $(".logo img").css({'width': '400px'});
+                        $(".logo").css({'width': '400px', 'margin-top': '-5.7%'});
+                        $(".img-upload").css({'top': '-22px'});
+                    }
                 }
             });
         });

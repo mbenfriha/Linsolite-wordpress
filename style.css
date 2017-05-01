@@ -345,7 +345,7 @@ input::-webkit-input-placeholder {
 
 
 .allVideo {
-    margin-top: 15%;
+    margin-top: 9%;
     width: 100%;
     position: relative;
     margin-bottom: 9%;
@@ -379,7 +379,7 @@ input::-webkit-input-placeholder {
 
 .allVideo .videos .video {
     clear: both;
-    height: 344px;
+    height: 270px;
     border-top: 2px solid lightgrey;
     padding: 1.5% 2%;
     overflow: hidden;
