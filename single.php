@@ -34,7 +34,7 @@
         </div>
 
         <div class="ad-single">
-            <div class="adv-index">
+            <div class="adv-index hide-on-med-and-down">
                 <div class="adv">
                     <script type="text/javascript">ad6b728('zeofl1gpt6');</script>
                 </div>
