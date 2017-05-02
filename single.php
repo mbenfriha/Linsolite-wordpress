@@ -36,9 +36,7 @@
         <div class="ad-single">
             <div class="adv-index">
                 <div class="adv">
-                    <a href="https://www.facebook.com/linsolitetv/" target="_blank">
-                        <img src="<?= esc_url( home_url( '/' )) ?>wp-content/themes/Linsolite-wordpress/inc/img/pub_index.png" alt="linsolite facebook">
-                    </a>
+                    <script type="text/javascript">ad6b728('zeofl1gpt6');</script>
                 </div>
             </div>
         </div>

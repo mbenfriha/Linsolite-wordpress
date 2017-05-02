@@ -27,6 +27,7 @@
 
 
     <script src="https://use.fontawesome.com/250b302b5a.js"></script>
+    <script type="text/javascript" src="http://c.ad6media.fr/l.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 
